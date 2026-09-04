@@ -1,0 +1,65 @@
+app_id,display_name,package_name,apk_filename,apk_url,optional
+notes_markor,Markor,net.gsantner.markor,net.gsantner.markor.apk,,false
+notes_joplin,Joplin,net.cozic.joplin,net.cozic.joplin.apk,,false
+notes_notallyx,NotallyX,com.philkes.notallyx,notallyx.apk,github://PhilKes/NotallyX,false
+notes_neutrinote,neutriNote CE,com.appmindlab.nano,neutrinote.apk,,false
+notes_notesnook,Notesnook,com.streetwriters.notesnook,notesnook.apk,,false
+notes_orgzly_revived,Orgzly Revived,com.orgzlyrevived,orgzly_revived.apk,,true
+notes_my_brain,My Brain,com.mhss.app.mybrain,my_brain.apk,,true
+todo_tasks_org,Tasks.org,org.tasks,org.tasks.apk,,false
+todo_cfait,Cfait,com.trougnouf.cfait,cfait.apk,,false
+todo_trudido,Trudido,com.trudido.app,trudido.apk,https://f-droid.org/repo/com.trudido.app_2025.apk,false
+todo_todo_list_pfa,Todo List (PFA),org.secuso.privacyfriendlytodolist,todo_list_pfa.apk,,false
+todo_ntodotxt,ntodotxt,de.tnmgl.ntodotxt,ntodotxt.apk,,false
+todo_taskmate,TaskMate,com.amirsteinbeck.taskmate,taskmate.apk,,false
+todo_super_productivity,Super Productivity,com.superproductivity.superproductivity,super_productivity.apk,,true
+todo_grit,Grit,com.shub39.grit,grit.apk,,true
+clock_clock,Clock,com.best.deskclock,clock.apk,,false
+clock_simple_clock,Simple Clock,com.simplemobiletools.clock,simple_clock.apk,,false
+clock_google_clock,Google Clock,com.google.android.deskclock,google_clock_pinned_api33.apk,https://apkcombo.com/google-clock/com.google.android.deskclock/download/apk,false
+clock_clockyou,Clock You,com.bnyro.clock,clock_you.apk,,true
+clock_chrono,Chrono,com.vicolo.chrono,chrono.apk,,false
+clock_fossify_clock,Fossify Clock,org.fossify.clock,fossify_clock.apk,,false
+calendar_simple_calendar_pro,Simple Calendar Pro,com.simplemobiletools.calendar.pro,simple_calendar_pro.apk,,true
+calendar_etar,Etar,ws.xsoh.etar,etar.apk,,false
+calendar_fossify_calendar,Fossify Calendar,org.fossify.calendar,fossify_calendar.apk,,false
+calendar_proton_calendar,Proton Calendar,me.proton.android.calendar,proton_calendar.apk,https://protonmail.com/download/CalendarAndroid/ProtonCalendar-Android.apk,false
+calendar_kashcal,KashCal,org.onekash.kashcal,kashcal.apk,,false
+calendar_google_calendar,Google Calendar,com.google.android.calendar,google_calendar.apk,,true
+contacts_google_contacts,Google Contacts,com.google.android.contacts,google_contacts_pinned_api33.apk,https://apkcombo.com/google-contacts/com.google.android.contacts/download/apk,false
+contacts_fossify_contacts,Fossify Contacts,org.fossify.contacts,fossify_contacts.apk,,false
+contacts_connect_you,Connect You,com.bnyro.contacts,connect_you.apk,,false
+contacts_simple_contacts_pro_se,Simple Contacts Pro SE,com.simplemobiletools.contacts.pro,simple_contacts_pro_se.apk,github://SimpleMobileTools/Simple-Contacts,false
+contacts_right_contact,Right Contact,com.goodwy.contacts,right_contact.apk,github://Goodwy/Contacts:foss,false
+sms_simple_sms_messenger,Simple SMS Messenger,com.simplemobiletools.smsmessenger,simple_sms_messenger.apk,github://SimpleMobileTools/Simple-SMS-Messenger,false
+sms_fossify_messages,Fossify Messages,org.fossify.messages,fossify_messages.apk,,false
+sms_quik_sms,QUIK SMS,dev.octoshrimpy.quik.fdroid,quik_sms.apk,github://octoshrimpy/quik:fdroid,false
+sms_google_messages,Messages,com.google.android.apps.messaging,google_messages_pinned_api33.apk,https://apkcombo.com/google-messages/com.google.android.apps.messaging/download/apk,true
+maps_osmand,OsmAnd~,net.osmand.plus,osmand.apk,,false
+maps_organic_maps,Organic Maps,app.organicmaps,organic_maps.apk,,false
+maps_google_maps,Google Maps,com.google.android.apps.maps,google_maps_pinned_api33.apk,https://apkcombo.com/google-maps/com.google.android.apps.maps/download/apk,false
+maps_comaps,CoMaps,app.comaps.fdroid,comaps.apk,,false
+maps_maps_me,MAPS.ME,com.mapswithme.maps.pro,maps_me.xapk,https://apkcombo.com/maps-me-offline-maps-gps-nav/com.mapswithme.maps.pro/download/apk,false
+files_material_files,Material Files,me.zhanghai.android.files,material_files.apk,,false
+files_amaze,Amaze File Manager,com.amaze.filemanager,amaze.apk,,false
+files_fossify_file_manager,Fossify File Manager,org.fossify.filemanager,fossify_file_manager.apk,,false
+files_total_commander,Total Commander,com.ghisler.android.TotalCommander,total_commander.apk,https://d.apkpure.net/b/APK/com.ghisler.android.TotalCommander?version=latest,false
+files_x_plore_file_manager,X-plore File Manager,com.lonelycatgames.Xplore,x_plore_file_manager.xapk,https://d.apkpure.net/b/XAPK/com.lonelycatgames.Xplore?versionCode=44301&nc=arm64-v8a%2Carmeabi-v7a%2Cx86%2Cx86_64&sv=24,false
+music_retro_music,Retro Music,code.name.monkey.retromusic,retro_music.apk,,false
+music_fossify_music,Fossify Music,org.fossify.musicplayer,fossify_music.apk,https://f-droid.org/repo/org.fossify.musicplayer_14.apk,false
+music_phonograph_plus,Phonograph Plus,player.phonograph.plus,phonograph_plus.apk,https://f-droid.org/repo/player.phonograph.plus_1121.apk,false
+music_auxio,Auxio,org.oxycblt.auxio,auxio.apk,,false
+music_simple_music_player,Simple Music Player,com.simplemobiletools.musicplayer,simple_music_player.apk,,true
+finance_my_expenses,My Expenses,org.totschnig.myexpenses,my_expenses.apk,https://f-droid.org/repo/org.totschnig.myexpenses_842.apk,false
+finance_oinkoin,Oinkoin Pro,com.github.emavgl.piggybankpro,oinkoin.apk,https://f-droid.org/repo/com.github.emavgl.piggybankpro_7116002.apk,false
+finance_open_money_box,OpenMoneyBox,com.igisw.openmoneybox,open_money_box.apk,,false
+finance_pro_expense,Pro Expense,com.arduia.expense,pro_expense.apk,https://f-droid.org/repo/com.arduia.expense_12.apk,false
+finance_financisto,Financisto,ru.orangesoftware.financisto,financisto.apk,,true
+calendar_calendar,Calendar,com.vayunmathur.calendar,calendar.apk,,false
+calendar_samsung_calendar,Samsung Calendar,com.samsung.android.calendar,samsung_calendar.apk,,true
+finance_finance_manager,Finance Manager,org.secuso.privacyfriendlyfinancemanager,finance_manager.apk,https://f-droid.org/repo/org.secuso.privacyfriendlyfinancemanager_100.apk,true
+finance_openmoneybox,OpenMoneyBox,com.igisw.openmoneybox,openmoneybox.apk,https://f-droid.org/repo/com.igisw.openmoneybox_67.apk,true
+finance_sushi,Sushi,com.jerameeldelosreyes.sushi,sushi.apk,https://f-droid.org/repo/com.jerameeldelosreyes.sushi_15.apk,true
+music_apollo,Apollo,org.nuclearfog.apollo,apollo.apk,https://f-droid.org/repo/org.nuclearfog.apollo_74.apk,true
+music_monstermusic,MonsterMusic,com.ztftrue.music,monstermusic.apk,https://f-droid.org/repo/com.ztftrue.music_69.apk,true
+music_sicmu_neo,SicMu Neo,xyz.mordorx.sicmu,sicmu_neo.apk,https://f-droid.org/repo/xyz.mordorx.sicmu_38.apk,true

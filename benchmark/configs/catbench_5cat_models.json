@@ -1,0 +1,234 @@
+{
+  "models": [
+    {
+      "name": "UI-Venus-72B",
+      "group": "GUI-Spec.",
+      "runner_script": "benchmark/run_openai_python_action.py",
+      "args": [
+        "--endpoint_url=${UI_VENUS_72B_URL:-http://127.0.0.1:8000}",
+        "--model_name=${UI_VENUS_72B_MODEL:-inclusionAI/UI-Venus-Navi-72B}",
+        "--endpoint_format=${UI_VENUS_72B_ENDPOINT_FORMAT:-openai}",
+        "--prompt_style=ui_venus_navi",
+        "--image_max_pixels=${UI_VENUS_IMAGE_MAX_PIXELS:-933120}"
+      ]
+    },
+    {
+      "name": "UI-Venus-7B",
+      "group": "GUI-Spec.",
+      "repository": "inclusionAI/UI-Venus-Navi-7B",
+      "revision": "f3c6e7264df2a3d75db2f25b3a63a6955a0f062d",
+      "runner_script": "benchmark/run_openai_python_action.py",
+      "args": [
+        "--endpoint_url=${UI_VENUS_7B_URL:-http://127.0.0.1:8000}",
+        "--model_name=inclusionAI/UI-Venus-Navi-7B",
+        "--endpoint_format=openai",
+        "--endpoint_min_context_len=16384",
+        "--endpoint_require_loopback=true",
+        "--prompt_style=ui_venus_navi",
+        "--image_max_pixels=${UI_VENUS_IMAGE_MAX_PIXELS:-933120}"
+      ]
+    },
+    {
+      "name": "GUI-Owl-7B",
+      "group": "GUI-Spec.",
+      "repository": "mPLUG/GUI-Owl-7B",
+      "revision": "7c1644c0288da07435a485701d0fea0ac353f38a",
+      "runner_script": "benchmark/run_gui_owl.py",
+      "args": [
+        "--mode=endpoint",
+        "--endpoint_url=${GUI_OWL_URL:-http://127.0.0.1:8000}",
+        "--model_name=mPLUG/GUI-Owl-7B",
+        "--endpoint_min_context_len=16384",
+        "--endpoint_require_loopback=true"
+      ]
+    },
+    {
+      "name": "MAI-UI-8B",
+      "group": "GUI-Spec.",
+      "repository": "Tongyi-MAI/MAI-UI-8B",
+      "revision": "e00a0097abb9cc621cac5172d8c4809f0839c94e",
+      "runner_script": "benchmark/run_maiui.py",
+      "args": [
+        "--maiui_variant=8b",
+        "--mode=endpoint",
+        "--endpoint_url=${MAI_UI_URL:-http://127.0.0.1:8000}",
+        "--model_name=Tongyi-MAI/MAI-UI-8B",
+        "--endpoint_min_context_len=16384",
+        "--endpoint_require_loopback=true"
+      ]
+    },
+    {
+      "name": "MobileRL-9B",
+      "group": "GUI-Spec.",
+      "runner_script": "benchmark/run_mobilerl.py",
+      "args": [
+        "--mode=endpoint",
+        "--endpoint_url=${MOBILERL_URL:-http://127.0.0.1:8001}",
+        "--model_name=${MOBILERL_MODEL:-xuyifan/MobileRL-9B}"
+      ]
+    },
+    {
+      "name": "UI Voyager-4B",
+      "group": "GUI-Spec.",
+      "repository": "MarsXL/UI-Voyager",
+      "revision": "c262b85f18f1c669b19bca544e0ee2eb71225ff3",
+      "runner_script": "benchmark/run_ui_voyager.py",
+      "args": [
+        "--endpoint_url=${UI_VOYAGER_URL:-http://127.0.0.1:8000}",
+        "--model_name=UI-Voyager",
+        "--endpoint_min_context_len=16384",
+        "--endpoint_require_loopback=true"
+      ]
+    },
+    {
+      "name": "Qwen3-VL-30B-A3B",
+      "group": "General",
+      "runner_script": "benchmark/run_qwen3vl.py",
+      "args": [
+        "--mode=endpoint",
+        "--endpoint_url=${QWEN3VL_30B_URL:-http://127.0.0.1:8000}",
+        "--endpoint_format=${QWEN3VL_30B_ENDPOINT_FORMAT:-openai}",
+        "--model_name=${QWEN3VL_30B_MODEL:-Qwen/Qwen3-VL-30B-A3B-Instruct}"
+      ]
+    },
+    {
+      "name": "Qwen3-VL-8B",
+      "group": "General",
+      "repository": "Qwen/Qwen3-VL-8B-Instruct",
+      "revision": "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+      "runner_script": "benchmark/run_qwen3vl.py",
+      "args": [
+        "--mode=endpoint",
+        "--endpoint_url=${QWEN3VL_8B_URL:-http://127.0.0.1:8000}",
+        "--endpoint_format=openai",
+        "--model_name=Qwen/Qwen3-VL-8B-Instruct",
+        "--endpoint_min_context_len=16384",
+        "--endpoint_require_loopback=true"
+      ]
+    },
+    {
+      "name": "Qwen2.5-VL-72B",
+      "group": "General",
+      "runner_script": "benchmark/run_openai_python_action.py",
+      "args": [
+        "--endpoint_url=${QWEN25VL_72B_URL:-http://127.0.0.1:8000}",
+        "--model_name=${QWEN25VL_72B_MODEL:-Qwen/Qwen2.5-VL-72B-Instruct}",
+        "--endpoint_format=${QWEN25VL_72B_ENDPOINT_FORMAT:-openai}",
+        "--prompt_style=ui_venus_navi"
+      ]
+    },
+    {
+      "name": "InternVL3-78B",
+      "group": "General",
+      "runner_script": "benchmark/run_openai_python_action.py",
+      "args": [
+        "--endpoint_url=${INTERNVL3_78B_URL:-http://127.0.0.1:8000}",
+        "--model_name=${INTERNVL3_78B_MODEL:-OpenGVLab/InternVL3-78B}",
+        "--endpoint_format=${INTERNVL3_78B_ENDPOINT_FORMAT:-openai}",
+        "--prompt_style=ui_venus_navi"
+      ]
+    },
+    {
+      "name": "Gemini-3-Pro",
+      "group": "Closed",
+      "runner_script": "benchmark/run.py",
+      "args": [
+        "--agent_name=m3a_gemini_gcp",
+        "--gemini_model_name=${GEMINI_MODEL:-gemini-3.1-pro-preview}"
+      ]
+    },
+    {
+      "name": "GPT-5.1",
+      "group": "Closed",
+      "runner_script": "benchmark/run.py",
+      "args": [
+        "--agent_name=m3a_gpt4v",
+        "--gpt_model_name=${OPENAI_MODEL:-gpt-5.1}",
+        "--gpt_base_url=${OPENAI_BASE_URL:-https://api.openai.com/v1/chat/completions}"
+      ]
+    },
+    {
+      "name": "Claude Sonnet 4",
+      "group": "Closed",
+      "runner_script": "benchmark/run.py",
+      "args": [
+        "--agent_name=m3a_claude_proxy",
+        "--claude_model_name=${CLAUDE_MODEL:-claude-sonnet-4-6}",
+        "--claude_proxy_base_url=${CLAUDE_PROXY_BASE_URL:-}"
+      ]
+    },
+    {
+      "name": "Gemini-3-Pro-dagger",
+      "group": "Hybrid",
+      "runner_script": "benchmark/run_m3a_venus.py",
+      "args": [
+        "--planner=gemini",
+        "--gemini_model_name=${GEMINI_MODEL:-gemini-3.1-pro-preview}",
+        "--grounder_url=${UI_VENUS_72B_GROUNDER_URL:-http://127.0.0.1:8001}",
+        "--grounder_model=${UI_VENUS_72B_GROUNDER_MODEL:-ui-venus-gd}",
+        "--grounder_endpoint_format=${UI_VENUS_72B_GROUNDER_ENDPOINT_FORMAT:-openai}"
+      ]
+    },
+    {
+      "name": "GPT-5.1-dagger",
+      "group": "Hybrid",
+      "runner_script": "benchmark/run_m3a_venus.py",
+      "args": [
+        "--planner=gpt",
+        "--gpt_model_name=${OPENAI_MODEL:-gpt-5.1}",
+        "--gpt_base_url=${OPENAI_BASE_URL:-https://api.openai.com/v1/chat/completions}",
+        "--grounder_url=${UI_VENUS_72B_GROUNDER_URL:-http://127.0.0.1:8001}",
+        "--grounder_model=${UI_VENUS_72B_GROUNDER_MODEL:-ui-venus-gd}",
+        "--grounder_endpoint_format=${UI_VENUS_72B_GROUNDER_ENDPOINT_FORMAT:-openai}"
+      ]
+    },
+    {
+      "name": "Claude Sonnet 4-dagger",
+      "group": "Hybrid",
+      "runner_script": "benchmark/run_m3a_venus.py",
+      "args": [
+        "--planner=claude",
+        "--claude_model_name=${CLAUDE_MODEL:-claude-sonnet-4-6}",
+        "--claude_proxy_base_url=${CLAUDE_PROXY_BASE_URL:-}",
+        "--grounder_url=${UI_VENUS_72B_GROUNDER_URL:-http://127.0.0.1:8001}",
+        "--grounder_model=${UI_VENUS_72B_GROUNDER_MODEL:-ui-venus-gd}",
+        "--grounder_endpoint_format=${UI_VENUS_72B_GROUNDER_ENDPOINT_FORMAT:-openai}"
+      ]
+    },
+    {
+      "name": "Mobile-Agent-v3",
+      "group": "Agent",
+      "runner_script": "benchmark/run_mobile_agent_v3.py",
+      "args": [
+        "--endpoint_url=${MOBILE_AGENT_V3_URL:-http://127.0.0.1:8000}",
+        "--model_name=${MOBILE_AGENT_V3_MODEL:-mobile-agent-v3}"
+      ]
+    },
+    {
+      "name": "AgentProg",
+      "group": "Agent",
+      "runner_script": "benchmark/run_agentprog.py",
+      "args": [
+        "--agentprog_root=${AGENTPROG_ROOT:-$HOME/AgentProg}",
+        "--model=${AGENTPROG_MODEL:-gemini/gemini-2.5-pro}",
+        "--base_url=${AGENTPROG_BASE_URL}",
+        "--ui_tars_model=${AGENTPROG_UI_TARS_MODEL:-doubao-seed-1-8-251228}",
+        "--ui_tars_base_url=${AGENTPROG_UI_TARS_BASE_URL}",
+        "--use_belief_state=true"
+      ]
+    },
+    {
+      "name": "AutoDev",
+      "group": "Agent",
+      "enabled": false,
+      "runner_script": "benchmark/run.py",
+      "args": [
+        "--agent_name=autodev_agent",
+        "--autodev_planner_model=${AUTODEV_PLANNER_MODEL:-openai/gpt-4o}",
+        "--autodev_executor_model=${AUTODEV_EXECUTOR_MODEL:-openai/gpt-4o}",
+        "--autodev_transcriber_model=${AUTODEV_TRANSCRIBER_MODEL:-openai/gpt-4o}",
+        "--autodev_base_url=${AUTODEV_BASE_URL:-}"
+      ]
+    }
+  ]
+}

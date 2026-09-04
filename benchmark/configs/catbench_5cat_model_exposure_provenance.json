@@ -1,0 +1,290 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-07-10",
+  "audit_scope": "Exact locally pinned model-card README at the revision configured for each of the five Phase-A primary models. Linked papers, websites, repositories, images, and unpinned revisions were not used.",
+  "interpretation": "This table records disclosures, not inferred exposure. A benchmark result or validation artifact does not establish that the benchmark was or was not used for training. Lack of a package, screenshot, template, or instruction disclosure is encoded as unknown_not_disclosed, never as no exposure.",
+  "status_vocabulary": {
+    "explicitly_disclosed": "The pinned README states the relationship in text.",
+    "partial_no_named_datasets": "The pinned README describes a method, scale, or broad data type but names no training dataset or corpus.",
+    "unknown_not_disclosed": "The pinned README does not provide enough information to answer the exposure question.",
+    "not_auditable_missing_pinned_readme": "The exact pinned snapshot contains no README.md; no model-card claim is available for this audit."
+  },
+  "roster_source": {
+    "path": "benchmark/configs/catbench_5cat_models.json",
+    "sha256_at_audit": "4b4d41ec2e37f2cd3418916fbc3e160724b40fe3ac924d194a5ef805d5f49150"
+  },
+  "target_scope": {
+    "cohort_path": "benchmark/configs/catbench_5cat_primary_cohort.json",
+    "cohort_sha256_at_audit": "3e6539a22d8204122ba0bb10ecc85efd8bf693206a70ca3834c7e041820718fc",
+    "package_source_path": "benchmark/configs/app_versions_pinned.csv",
+    "package_source_sha256_at_audit": "28643d7dd232d95abb1376fd4e1457763f3bcc452db17c71aed06b25c3f26f62",
+    "app_count": 23,
+    "semantic_template_count": 50,
+    "package_names": [
+      "com.simplemobiletools.smsmessenger",
+      "org.fossify.messages",
+      "dev.octoshrimpy.quik.fdroid",
+      "com.google.android.apps.messaging",
+      "me.zhanghai.android.files",
+      "com.amaze.filemanager",
+      "org.fossify.filemanager",
+      "com.ghisler.android.TotalCommander",
+      "com.lonelycatgames.Xplore",
+      "net.osmand.plus",
+      "app.organicmaps",
+      "app.comaps.fdroid",
+      "com.google.android.contacts",
+      "org.fossify.contacts",
+      "com.bnyro.contacts",
+      "com.simplemobiletools.contacts.pro",
+      "com.goodwy.contacts",
+      "com.best.deskclock",
+      "com.simplemobiletools.clock",
+      "com.google.android.deskclock",
+      "com.bnyro.clock",
+      "com.vicolo.chrono",
+      "org.fossify.clock"
+    ]
+  },
+  "models": [
+    {
+      "model_name": "UI-Venus-7B",
+      "model_repository": "inclusionAI/UI-Venus-Navi-7B",
+      "revision": "f3c6e7264df2a3d75db2f25b3a63a6955a0f062d",
+      "repository_provenance": {
+        "source": "benchmark/configs/catbench_5cat_models.json",
+        "lines": "16-24"
+      },
+      "pinned_model_card": {
+        "status": "present",
+        "local_path": "$HOME/.cache/huggingface/hub/models--inclusionAI--UI-Venus-Navi-7B/snapshots/f3c6e7264df2a3d75db2f25b3a63a6955a0f062d/README.md",
+        "sha256": "adf4a201032d9b79a42e52f8c76f68d7959bbb0a0510e61e552444e76f189a79"
+      },
+      "base_model": {
+        "status": "explicitly_disclosed",
+        "value": "Qwen2.5-VL",
+        "evidence_lines": [8, 32]
+      },
+      "training_and_posttraining": {
+        "disclosure_status": "partial_no_named_datasets",
+        "disclosed_descriptions": [
+          "Reinforcement fine-tuning with high-quality training data",
+          "Reward functions for grounding and navigation tasks",
+          "Several hundred thousand high-quality samples",
+          "Self-evolving trajectory-history alignment and sparse-action enhancement"
+        ],
+        "named_training_or_posttraining_datasets": [],
+        "dataset_composition": "unknown_not_disclosed",
+        "evidence_lines": [8, 36, 37, 38]
+      },
+      "androidworld": {
+        "explicitly_mentioned_in_card": true,
+        "explicit_relations": [
+          "benchmark evaluation/results",
+          "validation trajectories with execution logs and navigation paths"
+        ],
+        "training_or_posttraining_inclusion": "unknown_not_disclosed",
+        "evidence_lines": [8, 28, 32, 209, 210, 211, 231]
+      },
+      "catbench_target_material": {
+        "exact_package_names_explicitly_mentioned_in_card": [],
+        "target_app_screenshots_explicitly_identified_in_card_text": false,
+        "exact_catbench_semantic_task_ids_explicitly_mentioned_in_card": [],
+        "target_package_training_exposure": "unknown_not_disclosed",
+        "target_app_screenshot_training_exposure": "unknown_not_disclosed",
+        "catbench_template_or_instruction_training_exposure": "unknown_not_disclosed"
+      },
+      "strict_unseen_app_claim_supported_by_pinned_card": false,
+      "exposure_assessment": "unknown_not_disclosed"
+    },
+    {
+      "model_name": "GUI-Owl-7B",
+      "model_repository": "mPLUG/GUI-Owl-7B",
+      "revision": "7c1644c0288da07435a485701d0fea0ac353f38a",
+      "repository_provenance": {
+        "source": "benchmark/configs/catbench_5cat_models.json plus benchmark/run_gui_owl.py",
+        "lines": "config 28-35; runner 1-11"
+      },
+      "pinned_model_card": {
+        "status": "present",
+        "local_path": "$HOME/.cache/huggingface/hub/models--mPLUG--GUI-Owl-7B/snapshots/7c1644c0288da07435a485701d0fea0ac353f38a/README.md",
+        "sha256": "a0e6dd76aee6f138c15f244f4e2e8ba650b8829295397fdbfa839a8edf852b57"
+      },
+      "base_model": {
+        "status": "explicitly_disclosed",
+        "value": "Qwen/Qwen2.5-VL-7B-Instruct",
+        "evidence_lines": [5, 6]
+      },
+      "training_and_posttraining": {
+        "disclosure_status": "unknown_not_disclosed",
+        "disclosed_descriptions": [],
+        "named_training_or_posttraining_datasets": [],
+        "dataset_composition": "unknown_not_disclosed",
+        "evidence_lines": []
+      },
+      "androidworld": {
+        "explicitly_mentioned_in_card": true,
+        "explicit_relations": [
+          "GUI automation benchmark/performance"
+        ],
+        "training_or_posttraining_inclusion": "unknown_not_disclosed",
+        "evidence_lines": [17, 35, 36]
+      },
+      "catbench_target_material": {
+        "exact_package_names_explicitly_mentioned_in_card": [],
+        "target_app_screenshots_explicitly_identified_in_card_text": false,
+        "exact_catbench_semantic_task_ids_explicitly_mentioned_in_card": [],
+        "target_package_training_exposure": "unknown_not_disclosed",
+        "target_app_screenshot_training_exposure": "unknown_not_disclosed",
+        "catbench_template_or_instruction_training_exposure": "unknown_not_disclosed"
+      },
+      "strict_unseen_app_claim_supported_by_pinned_card": false,
+      "exposure_assessment": "unknown_not_disclosed"
+    },
+    {
+      "model_name": "MAI-UI-8B",
+      "model_repository": "Tongyi-MAI/MAI-UI-8B",
+      "revision": "e00a0097abb9cc621cac5172d8c4809f0839c94e",
+      "repository_provenance": {
+        "source": "benchmark/configs/catbench_5cat_models.json",
+        "lines": "39-48"
+      },
+      "pinned_model_card": {
+        "status": "present",
+        "local_path": "$HOME/.cache/huggingface/hub/models--Tongyi-MAI--MAI-UI-8B/snapshots/e00a0097abb9cc621cac5172d8c4809f0839c94e/README.md",
+        "sha256": "a1087d2a0dde6e7ba6d79db546ee6360a5ffd95ffbc3add1478eedec603a4187"
+      },
+      "base_model": {
+        "status": "unknown_not_disclosed",
+        "value": null,
+        "evidence_lines": []
+      },
+      "training_and_posttraining": {
+        "disclosure_status": "partial_no_named_datasets",
+        "disclosed_descriptions": [
+          "Self-evolving data pipeline expanding navigation data with user interaction and MCP tool calls",
+          "Online reinforcement-learning framework"
+        ],
+        "named_training_or_posttraining_datasets": [],
+        "dataset_composition": "unknown_not_disclosed",
+        "evidence_lines": [14, 53, 54]
+      },
+      "androidworld": {
+        "explicitly_mentioned_in_card": true,
+        "explicit_relations": [
+          "mobile-navigation benchmark/result"
+        ],
+        "training_or_posttraining_inclusion": "unknown_not_disclosed",
+        "evidence_lines": [48, 49, 50]
+      },
+      "catbench_target_material": {
+        "exact_package_names_explicitly_mentioned_in_card": [],
+        "target_app_screenshots_explicitly_identified_in_card_text": false,
+        "exact_catbench_semantic_task_ids_explicitly_mentioned_in_card": [],
+        "target_package_training_exposure": "unknown_not_disclosed",
+        "target_app_screenshot_training_exposure": "unknown_not_disclosed",
+        "catbench_template_or_instruction_training_exposure": "unknown_not_disclosed"
+      },
+      "strict_unseen_app_claim_supported_by_pinned_card": false,
+      "exposure_assessment": "unknown_not_disclosed"
+    },
+    {
+      "model_name": "UI Voyager-4B",
+      "model_repository": "MarsXL/UI-Voyager",
+      "revision": "c262b85f18f1c669b19bca544e0ee2eb71225ff3",
+      "repository_provenance": {
+        "source": "benchmark/configs/catbench_5cat_models.json plus benchmark/run_ui_voyager.py",
+        "lines": "config 61-67; runner 1-8"
+      },
+      "pinned_model_card": {
+        "status": "not_auditable_missing_pinned_readme",
+        "local_path": "$HOME/.cache/huggingface/hub/models--MarsXL--UI-Voyager/snapshots/c262b85f18f1c669b19bca544e0ee2eb71225ff3/README.md",
+        "sha256": null
+      },
+      "base_model": {
+        "status": "not_auditable_missing_pinned_readme",
+        "value": null,
+        "evidence_lines": []
+      },
+      "training_and_posttraining": {
+        "disclosure_status": "not_auditable_missing_pinned_readme",
+        "disclosed_descriptions": [],
+        "named_training_or_posttraining_datasets": [],
+        "dataset_composition": "not_auditable_missing_pinned_readme",
+        "evidence_lines": []
+      },
+      "androidworld": {
+        "explicitly_mentioned_in_card": "not_auditable_missing_pinned_readme",
+        "explicit_relations": [],
+        "training_or_posttraining_inclusion": "not_auditable_missing_pinned_readme",
+        "evidence_lines": []
+      },
+      "catbench_target_material": {
+        "exact_package_names_explicitly_mentioned_in_card": [],
+        "target_app_screenshots_explicitly_identified_in_card_text": "not_auditable_missing_pinned_readme",
+        "exact_catbench_semantic_task_ids_explicitly_mentioned_in_card": [],
+        "target_package_training_exposure": "not_auditable_missing_pinned_readme",
+        "target_app_screenshot_training_exposure": "not_auditable_missing_pinned_readme",
+        "catbench_template_or_instruction_training_exposure": "not_auditable_missing_pinned_readme"
+      },
+      "strict_unseen_app_claim_supported_by_pinned_card": false,
+      "exposure_assessment": "unknown_not_disclosed"
+    },
+    {
+      "model_name": "Qwen3-VL-8B",
+      "model_repository": "Qwen/Qwen3-VL-8B-Instruct",
+      "revision": "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+      "repository_provenance": {
+        "source": "benchmark/configs/catbench_5cat_models.json",
+        "lines": "82-89"
+      },
+      "pinned_model_card": {
+        "status": "present",
+        "local_path": "$HOME/.cache/huggingface/hub/models--Qwen--Qwen3-VL-8B-Instruct/snapshots/0c351dd01ed87e9c1b53cbc748cba10e6187ff3b/README.md",
+        "sha256": "6d5d06e0c3f069097002445d30dce9ee107db3afaf15563f09e6df49b8dcb4d7"
+      },
+      "base_model": {
+        "status": "unknown_not_disclosed",
+        "value": null,
+        "evidence_lines": []
+      },
+      "training_and_posttraining": {
+        "disclosure_status": "partial_no_named_datasets",
+        "disclosed_descriptions": [
+          "Broader, higher-quality pretraining"
+        ],
+        "named_training_or_posttraining_datasets": [],
+        "dataset_composition": "unknown_not_disclosed",
+        "evidence_lines": [33]
+      },
+      "androidworld": {
+        "explicitly_mentioned_in_card": false,
+        "explicit_relations": [],
+        "training_or_posttraining_inclusion": "unknown_not_disclosed",
+        "evidence_lines": []
+      },
+      "catbench_target_material": {
+        "exact_package_names_explicitly_mentioned_in_card": [],
+        "target_app_screenshots_explicitly_identified_in_card_text": false,
+        "exact_catbench_semantic_task_ids_explicitly_mentioned_in_card": [],
+        "target_package_training_exposure": "unknown_not_disclosed",
+        "target_app_screenshot_training_exposure": "unknown_not_disclosed",
+        "catbench_template_or_instruction_training_exposure": "unknown_not_disclosed"
+      },
+      "strict_unseen_app_claim_supported_by_pinned_card": false,
+      "exposure_assessment": "unknown_not_disclosed"
+    }
+  ],
+  "aggregate_conclusion": {
+    "models_audited": 5,
+    "pinned_readmes_present": 4,
+    "pinned_readmes_missing": 1,
+    "models_with_androidworld_evaluation_or_validation_disclosure": 3,
+    "models_with_androidworld_training_inclusion_explicitly_disclosed": 0,
+    "models_with_target_package_training_exposure_explicitly_disclosed": 0,
+    "models_with_target_screenshot_training_exposure_explicitly_disclosed": 0,
+    "models_with_catbench_template_or_instruction_training_exposure_explicitly_disclosed": 0,
+    "models_supporting_strict_unseen_app_claim_from_pinned_card": 0,
+    "strict_exposure_status_for_all_five_models": "unknown_not_disclosed"
+  }
+}

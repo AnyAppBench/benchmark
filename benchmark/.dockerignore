@@ -1,0 +1,25 @@
+# Never bake local credentials, endpoint overrides, or editor/agent state into
+# an image layer. Runtime secrets must be injected explicitly.
+.claude/
+.env
+**/.env
+configs/*.env
+**/*credentials*
+**/*secret*
+
+# Local environments and generated state are not build inputs.
+.git/
+.github/
+.venv/
+.pytest_cache/
+**/__pycache__/
+**/*.py[cod]
+docs/
+
+# Local result/checkpoint directories and transient logs.
+revision_artifacts/
+results/
+outputs/
+checkpoints/
+**/*.log
+nohup.out

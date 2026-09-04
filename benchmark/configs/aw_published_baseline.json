@@ -1,0 +1,100 @@
+{
+  "_about": [
+    "Published success rates from the Android World paper and follow-up agent papers,",
+    "restricted to the 6 AW-canonical Clock/Maps tasks that CATBench inherits unchanged.",
+    "These numbers are the *AW reference* for our reproduction check.",
+    "",
+    "IMPORTANT: fill in the SR values from the cited papers. Leave `published_sr: null`",
+    "for any (agent, task) pair you do not want to defend against — the reporter will",
+    "skip the comparison for those cells.",
+    "",
+    "Fields:",
+    "  source        : short citation key, used in the paper table footnote",
+    "  paper_table   : which table in the cited paper the number comes from",
+    "  published_sr  : reported success rate (0.0 - 1.0)",
+    "  n_published   : reported sample size (number of trials in the cited paper)",
+    "  notes         : free-form (e.g. 'averaged across 3 seeds')"
+  ],
+  "tasks": {
+    "ClockTimerEntry": {
+      "app_name": "Google Clock",
+      "package": "com.google.android.deskclock",
+      "class_module": "android_world.task_evals.single.clock"
+    },
+    "ClockStopWatchRunning": {
+      "app_name": "Google Clock",
+      "package": "com.google.android.deskclock",
+      "class_module": "android_world.task_evals.single.clock"
+    },
+    "ClockStopWatchPausedVerify": {
+      "app_name": "Google Clock",
+      "package": "com.google.android.deskclock",
+      "class_module": "android_world.task_evals.single.clock"
+    },
+    "OsmAndFavorite": {
+      "app_name": "osmand",
+      "package": "net.osmand.plus",
+      "class_module": "android_world.task_evals.single.osmand"
+    },
+    "OsmAndMarker": {
+      "app_name": "osmand",
+      "package": "net.osmand.plus",
+      "class_module": "android_world.task_evals.single.osmand"
+    },
+    "OsmAndTrack": {
+      "app_name": "osmand",
+      "package": "net.osmand.plus",
+      "class_module": "android_world.task_evals.single.osmand"
+    }
+  },
+  "published_by_agent": {
+    "M3A": {
+      "source": "rawles2024androidworld",
+      "paper_table": "Table 2",
+      "_note": "Multimodal-Autonomous-Agent baseline reported in the AW paper. Fill in.",
+      "results": {
+        "ClockTimerEntry":            {"published_sr": null, "n_published": null, "notes": ""},
+        "ClockStopWatchRunning":      {"published_sr": null, "n_published": null, "notes": ""},
+        "ClockStopWatchPausedVerify": {"published_sr": null, "n_published": null, "notes": ""},
+        "OsmAndFavorite":             {"published_sr": null, "n_published": null, "notes": ""},
+        "OsmAndMarker":               {"published_sr": null, "n_published": null, "notes": ""},
+        "OsmAndTrack":                {"published_sr": null, "n_published": null, "notes": ""}
+      }
+    },
+    "UI-TARS": {
+      "source": "qin2024uitars",
+      "paper_table": "TBD",
+      "_note": "Fill from UI-TARS paper. May only report aggregate, not per-task.",
+      "results": {
+        "ClockTimerEntry":            {"published_sr": null, "n_published": null, "notes": ""},
+        "ClockStopWatchRunning":      {"published_sr": null, "n_published": null, "notes": ""},
+        "ClockStopWatchPausedVerify": {"published_sr": null, "n_published": null, "notes": ""},
+        "OsmAndFavorite":             {"published_sr": null, "n_published": null, "notes": ""},
+        "OsmAndMarker":               {"published_sr": null, "n_published": null, "notes": ""},
+        "OsmAndTrack":                {"published_sr": null, "n_published": null, "notes": ""}
+      }
+    },
+    "Mobile-Agent-v3": {
+      "source": "wang2024mobileagentv3",
+      "paper_table": "TBD",
+      "_note": "Fill from MobileAgent v3 paper.",
+      "results": {
+        "ClockTimerEntry":            {"published_sr": null, "n_published": null, "notes": ""},
+        "ClockStopWatchRunning":      {"published_sr": null, "n_published": null, "notes": ""},
+        "ClockStopWatchPausedVerify": {"published_sr": null, "n_published": null, "notes": ""},
+        "OsmAndFavorite":             {"published_sr": null, "n_published": null, "notes": ""},
+        "OsmAndMarker":               {"published_sr": null, "n_published": null, "notes": ""},
+        "OsmAndTrack":                {"published_sr": null, "n_published": null, "notes": ""}
+      }
+    }
+  },
+  "tolerance": {
+    "_note": [
+      "Per-task absolute tolerance in percentage points.",
+      "If CATBench-measured SR is within `delta_pp` of the published SR, the cell PASSES.",
+      "Recommended default: 15 pp, matching typical AW-reproduction variance from",
+      "stochastic agent runs and model-snapshot drift."
+    ],
+    "delta_pp": 15.0
+  }
+}

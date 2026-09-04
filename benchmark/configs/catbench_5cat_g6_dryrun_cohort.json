@@ -1,0 +1,115 @@
+{
+  "release_id": "catbench_acl_revision_5cat_g6_dryrun_v1",
+  "status": "ready",
+  "release_purpose": "g6_discard_only_end_to_end_validation",
+  "analysis_eligible": false,
+  "artifact_role": "discard_only_never_primary_analysis",
+  "schedule_seed": 20260711,
+  "suite_family": "android_world",
+  "task_random_seed": 30,
+  "n_task_combinations": 3,
+  "conditions": ["c1", "c2_g", "c2_o"],
+  "episode_runtime_policy": {
+    "schema_version": 1,
+    "environment": {
+      "CATBENCH_CLEAR_APP_DATA_METHOD": "pm_clear",
+      "CATBENCH_EARLY_STOP_ON_SUCCESS": "1",
+      "CATBENCH_PM_CLEAR_TIMEOUT_SEC": "45",
+      "CATBENCH_PM_TIMEOUT_SEC": "45",
+      "CATBENCH_STRICT_CATEGORY_ISOLATION": "1",
+      "CATBENCH_TASK_TIMEOUT_SECONDS": "0",
+      "CATBENCH_USE_ISOLATE_CATEGORY_SCRIPT": "0",
+      "CATBENCH_VERIFIER_SETTLE_ATTEMPTS": "3",
+      "CATBENCH_VERIFIER_SETTLE_INTERVAL_SECONDS": "0.2"
+    }
+  },
+  "eligibility_gates": {},
+  "models": [
+    "UI-Venus-7B",
+    "GUI-Owl-7B",
+    "MAI-UI-8B",
+    "UI Voyager-4B",
+    "Qwen3-VL-8B"
+  ],
+  "categories": {
+    "sms": {
+      "aw_app_id": "sms_simple_sms_messenger",
+      "app_ids": ["sms_simple_sms_messenger"],
+      "semantic_task_ids": ["SmsSend"]
+    },
+    "files": {
+      "aw_app_id": "files_material_files",
+      "app_ids": ["files_material_files"],
+      "semantic_task_ids": ["FilesCreateFolder"]
+    },
+    "maps": {
+      "aw_app_id": "maps_osmand",
+      "app_ids": ["maps_osmand"],
+      "semantic_task_ids": ["MapsSearchPlace"]
+    },
+    "contacts": {
+      "aw_app_id": "contacts_google_contacts",
+      "app_ids": ["contacts_fossify_contacts"],
+      "semantic_task_ids": ["ContactsAddContact"]
+    },
+    "clock": {
+      "aw_app_id": "clock_google_clock",
+      "app_ids": ["clock_clock"],
+      "semantic_task_ids": ["ClockCreateAlarm"]
+    }
+  },
+  "paired_blocks": [
+    {
+      "model": "UI-Venus-7B",
+      "category": "sms",
+      "app_id": "sms_simple_sms_messenger",
+      "semantic_task_id": "SmsSend",
+      "instance_id": 0
+    },
+    {
+      "model": "GUI-Owl-7B",
+      "category": "files",
+      "app_id": "files_material_files",
+      "semantic_task_id": "FilesCreateFolder",
+      "instance_id": 1
+    },
+    {
+      "model": "MAI-UI-8B",
+      "category": "maps",
+      "app_id": "maps_osmand",
+      "semantic_task_id": "MapsSearchPlace",
+      "instance_id": 2
+    },
+    {
+      "model": "UI Voyager-4B",
+      "category": "contacts",
+      "app_id": "contacts_fossify_contacts",
+      "semantic_task_id": "ContactsAddContact",
+      "instance_id": 0
+    },
+    {
+      "model": "Qwen3-VL-8B",
+      "category": "clock",
+      "app_id": "clock_clock",
+      "semantic_task_id": "ClockCreateAlarm",
+      "instance_id": 1
+    }
+  ],
+  "selection_policy": {
+    "category_order": ["sms", "files", "maps", "contacts", "clock"],
+    "model_assignment": "primary_model_roster_order_one_model_per_category",
+    "app_choice": "first_primary_roster_app_with_a_locally_hash_matched_pin_excluding_missing_google_builds_and_unqualified_clock_you",
+    "semantic_task_choice": "first_frozen_semantic_task_in_each_category",
+    "instance_choice": "zero_based_category_index_modulo_three",
+    "outcome_information_used": false
+  },
+  "expected": {
+    "category_count": 5,
+    "app_count": 5,
+    "semantic_template_count": 5,
+    "task_app_count": 5,
+    "scheduled_instance_count": 5,
+    "episodes_per_condition": 5,
+    "episodes_all_conditions": 15
+  }
+}

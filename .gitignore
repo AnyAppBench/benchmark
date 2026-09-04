@@ -1,0 +1,74 @@
+# Python
+*.pyc
+__pycache__/
+.cache/
+.pytest_cache/
+.pytype/
+*.egg-info/
+.eggs/
+build/
+dist/
+poetry.lock
+.venv/
+venv/
+
+# Editors and OS
+.idea/
+.vscode/
+*.DS_Store
+
+# Assistant / agent session state.
+.claude/
+.codex/
+.agents/
+.cursor/
+.aider*
+CLAUDE.md
+AGENTS.md
+
+# Credentials. API keys belong in benchmark/configs/catbench.env, which is
+# never committed. These patterns catch the other shapes a secret arrives in.
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.p12
+*.keystore
+id_rsa*
+*credentials*
+*secrets*
+!benchmark/scripts/*secrets*_test.py
+logs/ngrok-credentials.txt
+
+# Experiment output. Results belong on shared storage, not in the repository.
+# Point the runners at it with --output_root.
+runs/
+results/
+frames/
+out_c2_k12/
+revision_artifacts/
+catbench_live_artifacts*/
+.catbench_combined_live/
+.catbench_markdown_redirect
+
+# Generated run reports, audit receipts and figures.
+markdown*.md
+# Audit receipts are run output, with two exceptions: these are attestation
+# data that provisioning code and tests read at runtime, so they ship.
+benchmark/docs/audits/*
+!benchmark/docs/audits/pinned_app_signer_audit.json
+!benchmark/docs/audits/clock_you_live_conformance_20260710.json
+benchmark/docs/figures/
+benchmark/docs/storage_profiles/*.log
+benchmark/docs/storage_profiles/*.jsonl
+
+# Paper sources, builds and editor backups.
+*.tex
+*.aux
+*.bbl
+*.blg
+*.synctex.gz
+*.bak
+*.bak_*
+/*.pdf

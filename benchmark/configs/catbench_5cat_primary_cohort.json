@@ -1,0 +1,244 @@
+{
+  "release_id": "catbench_acl_revision_5cat_v1",
+  "status": "blocked_pending_g3_verifier_conformance",
+  "schedule_seed": 20260710,
+  "suite_family": "android_world",
+  "task_random_seed": 30,
+  "n_task_combinations": 3,
+  "conditions": ["c1", "c2_g", "c2_o"],
+  "episode_runtime_policy": {
+    "schema_version": 1,
+    "environment": {
+      "CATBENCH_CLEAR_APP_DATA_METHOD": "pm_clear",
+      "CATBENCH_EARLY_STOP_ON_SUCCESS": "1",
+      "CATBENCH_PM_CLEAR_TIMEOUT_SEC": "45",
+      "CATBENCH_PM_TIMEOUT_SEC": "45",
+      "CATBENCH_STRICT_CATEGORY_ISOLATION": "1",
+      "CATBENCH_TASK_TIMEOUT_SECONDS": "0",
+      "CATBENCH_USE_ISOLATE_CATEGORY_SCRIPT": "0",
+      "CATBENCH_VERIFIER_SETTLE_ATTEMPTS": "3",
+      "CATBENCH_VERIFIER_SETTLE_INTERVAL_SECONDS": "0.2"
+    }
+  },
+  "eligibility_gates": {
+    "clock_clockyou": {
+      "app_id": "clock_clockyou",
+      "category": "clock",
+      "required_for_primary": true,
+      "status": "ready",
+      "reason": "Pinned Clock You 9.1 passed all 42 real-device positive, no-op, wrong-state, partial-state, and lifecycle cases across the frozen ten templates; see benchmark/docs/audits/clock_you_live_conformance_20260710.json (SHA-256 a094319bd200f7e3a2963527090275a65c88f18869c72ee45b099e4670f48d51)."
+    },
+    "verifier_conformance": {
+      "required_for_primary": true,
+      "status": "blocked",
+      "qualification_policy": "all_frozen_task_app_adapters_with_primitive_action_positive_reset_replay_and_six_negative_controls_v1",
+      "adapter_count": 230,
+      "qualified_adapter_count": 0,
+      "unqualified_adapter_count": 230,
+      "approval_status": "not_approved",
+      "evidence_manifest_sha256": "",
+      "approval_record_sha256": "",
+      "known_unqualified_scored_adapters": [
+        "contacts/contacts_right_contact/ContactsAddContact",
+        "contacts/contacts_right_contact/ContactsNewContactDraft",
+        "contacts/contacts_right_contact/ContactsEditContact",
+        "contacts/contacts_right_contact/ContactsSearchContact",
+        "contacts/contacts_right_contact/ContactsViewContactDetails",
+        "contacts/contacts_right_contact/ContactsAddFavoriteContact",
+        "contacts/contacts_right_contact/ContactsRemoveFavoriteContact",
+        "contacts/contacts_right_contact/ContactsDeleteContact",
+        "contacts/contacts_right_contact/ContactsCallContact",
+        "contacts/contacts_right_contact/ContactsMessageContact"
+      ],
+      "reason": "The current provenance inventory contains 230 frozen adapters but zero adapters qualified under the full G3 evidence standard. Live pinned-image evidence shows that Right Contact 8.2.3 uses Android phone storage and ContactsProvider in the clean configuration; all ten Right Contact cells still require pinned-app positive/negative live validation, including transition-latch validation for RemoveFavorite and Delete. No primary schedule may be analysis-eligible until an independent approval record covers all 230 adapters."
+    }
+  },
+  "models": [
+    "UI-Venus-7B",
+    "GUI-Owl-7B",
+    "MAI-UI-8B",
+    "UI Voyager-4B",
+    "Qwen3-VL-8B"
+  ],
+  "categories": {
+    "sms": {
+      "aw_app_id": "sms_simple_sms_messenger",
+      "app_ids": [
+        "sms_simple_sms_messenger",
+        "sms_fossify_messages",
+        "sms_quik_sms",
+        "sms_google_messages"
+      ],
+      "semantic_task_ids": [
+        "SmsSend",
+        "SmsReply",
+        "SmsReplyMostRecent",
+        "SmsResend",
+        "SmsSendToContact",
+        "SmsSendReceivedAddress",
+        "SmsCreateDraftMessage",
+        "SmsEditDraftMessage",
+        "SmsDeleteConversation",
+        "SmsForwardMessage"
+      ],
+      "semantic_origins": {
+        "SmsSend": "androidworld_intent_adapted_by_catbench",
+        "SmsReply": "androidworld_intent_adapted_by_catbench",
+        "SmsReplyMostRecent": "androidworld_intent_adapted_by_catbench",
+        "SmsResend": "androidworld_intent_adapted_by_catbench",
+        "SmsSendToContact": "catbench_new_semantic_template",
+        "SmsSendReceivedAddress": "androidworld_intent_adapted_by_catbench",
+        "SmsCreateDraftMessage": "catbench_new_semantic_template",
+        "SmsEditDraftMessage": "catbench_new_semantic_template",
+        "SmsDeleteConversation": "catbench_new_semantic_template",
+        "SmsForwardMessage": "catbench_new_semantic_template"
+      }
+    },
+    "files": {
+      "aw_app_id": "files_material_files",
+      "app_ids": [
+        "files_material_files",
+        "files_amaze",
+        "files_fossify_file_manager",
+        "files_total_commander",
+        "files_x_plore_file_manager"
+      ],
+      "semantic_task_ids": [
+        "FilesCreateFolder",
+        "FilesRenameFile",
+        "FilesDeleteFile",
+        "FilesMoveFile",
+        "FilesSaveCopyOfFile",
+        "FilesSearchFile",
+        "FilesCompressFiles",
+        "FilesExtractArchive",
+        "FilesViewFileInfo",
+        "FilesShareFile"
+      ],
+      "semantic_origins": {
+        "FilesCreateFolder": "catbench_new_semantic_template",
+        "FilesRenameFile": "catbench_new_semantic_template",
+        "FilesDeleteFile": "androidworld_intent_adapted_by_catbench",
+        "FilesMoveFile": "androidworld_intent_adapted_by_catbench",
+        "FilesSaveCopyOfFile": "androidworld_intent_adapted_by_catbench",
+        "FilesSearchFile": "catbench_new_semantic_template",
+        "FilesCompressFiles": "catbench_new_semantic_template",
+        "FilesExtractArchive": "catbench_new_semantic_template",
+        "FilesViewFileInfo": "catbench_new_semantic_template",
+        "FilesShareFile": "catbench_new_semantic_template"
+      }
+    },
+    "maps": {
+      "aw_app_id": "maps_osmand",
+      "app_ids": [
+        "maps_osmand",
+        "maps_organic_maps",
+        "maps_comaps"
+      ],
+      "semantic_task_ids": [
+        "MapsSearchPlace",
+        "MapsAddFavorite",
+        "MapsRemoveFavorite",
+        "MapsAddMarker",
+        "MapsDeleteMarker",
+        "MapsRecordTrack",
+        "MapsGetDirections",
+        "MapsSearchNearbyPlace",
+        "MapsExportLocation",
+        "MapsShareLocation"
+      ],
+      "semantic_origins": {
+        "MapsSearchPlace": "catbench_new_semantic_template",
+        "MapsAddFavorite": "androidworld_intent_adapted_by_catbench",
+        "MapsRemoveFavorite": "catbench_new_semantic_template",
+        "MapsAddMarker": "androidworld_intent_adapted_by_catbench",
+        "MapsDeleteMarker": "catbench_new_semantic_template",
+        "MapsRecordTrack": "androidworld_intent_adapted_by_catbench",
+        "MapsGetDirections": "catbench_new_semantic_template",
+        "MapsSearchNearbyPlace": "catbench_new_semantic_template",
+        "MapsExportLocation": "catbench_new_semantic_template",
+        "MapsShareLocation": "catbench_new_semantic_template"
+      }
+    },
+    "contacts": {
+      "aw_app_id": "contacts_google_contacts",
+      "app_ids": [
+        "contacts_google_contacts",
+        "contacts_fossify_contacts",
+        "contacts_connect_you",
+        "contacts_simple_contacts_pro_se",
+        "contacts_right_contact"
+      ],
+      "semantic_task_ids": [
+        "ContactsAddContact",
+        "ContactsNewContactDraft",
+        "ContactsEditContact",
+        "ContactsSearchContact",
+        "ContactsViewContactDetails",
+        "ContactsAddFavoriteContact",
+        "ContactsRemoveFavoriteContact",
+        "ContactsDeleteContact",
+        "ContactsCallContact",
+        "ContactsMessageContact"
+      ],
+      "semantic_origins": {
+        "ContactsAddContact": "androidworld_intent_adapted_by_catbench",
+        "ContactsNewContactDraft": "androidworld_intent_adapted_by_catbench",
+        "ContactsEditContact": "catbench_new_semantic_template",
+        "ContactsSearchContact": "catbench_new_semantic_template",
+        "ContactsViewContactDetails": "catbench_new_semantic_template",
+        "ContactsAddFavoriteContact": "catbench_new_semantic_template",
+        "ContactsRemoveFavoriteContact": "catbench_new_semantic_template",
+        "ContactsDeleteContact": "catbench_new_semantic_template",
+        "ContactsCallContact": "catbench_new_semantic_template",
+        "ContactsMessageContact": "catbench_new_semantic_template"
+      }
+    },
+    "clock": {
+      "aw_app_id": "clock_google_clock",
+      "app_ids": [
+        "clock_clock",
+        "clock_simple_clock",
+        "clock_google_clock",
+        "clock_clockyou",
+        "clock_chrono",
+        "clock_fossify_clock"
+      ],
+      "semantic_task_ids": [
+        "ClockCreateAlarm",
+        "ClockEditAlarm",
+        "ClockEnableAlarm",
+        "ClockDeleteAlarm",
+        "ClockCreateTimer",
+        "ClockStartTimer",
+        "ClockStopwatchRunning",
+        "ClockPauseStopwatch",
+        "ClockStopwatchReset",
+        "ClockAddWorldClock"
+      ],
+      "semantic_origins": {
+        "ClockCreateAlarm": "catbench_new_semantic_template",
+        "ClockEditAlarm": "catbench_new_semantic_template",
+        "ClockEnableAlarm": "catbench_new_semantic_template",
+        "ClockDeleteAlarm": "catbench_new_semantic_template",
+        "ClockCreateTimer": "androidworld_intent_adapted_by_catbench",
+        "ClockStartTimer": "catbench_new_semantic_template",
+        "ClockStopwatchRunning": "androidworld_intent_adapted_by_catbench",
+        "ClockPauseStopwatch": "androidworld_intent_adapted_by_catbench",
+        "ClockStopwatchReset": "catbench_new_semantic_template",
+        "ClockAddWorldClock": "catbench_new_semantic_template"
+      }
+    }
+  },
+  "expected": {
+    "category_count": 5,
+    "app_count": 23,
+    "semantic_template_count": 50,
+    "task_app_count": 230,
+    "instances_per_model_condition": 690,
+    "episodes_per_condition": 3450,
+    "episodes_all_conditions": 10350,
+    "androidworld_intent_adapted_semantic_template_count": 16,
+    "catbench_new_semantic_template_count": 34
+  }
+}

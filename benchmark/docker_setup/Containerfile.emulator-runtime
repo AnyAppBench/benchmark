@@ -1,0 +1,56 @@
+FROM ubuntu:22.04
+
+ARG DEBIAN_FRONTEND=noninteractive
+ARG EMULATOR_BUILD_ID=15042444
+
+RUN apt-get -o APT::Sandbox::User=root update \
+    && (apt-get -o APT::Sandbox::User=root install -y --no-install-recommends \
+      ca-certificates \
+      curl \
+      file \
+      iproute2 \
+      libasound2 \
+      libdbus-1-3 \
+      libdrm2 \
+      libfontconfig1 \
+      libgbm1 \
+      libgl1 \
+      libnss3 \
+      libpulse0 \
+      libvulkan1 \
+      libx11-6 \
+      libxcb1 \
+      libxcomposite1 \
+      libxcursor1 \
+      libxdamage1 \
+      libxext6 \
+      libxfixes3 \
+      libxkbcommon0 \
+      libxkbfile1 \
+      libxrandr2 \
+      libxshmfence1 \
+      mesa-vulkan-drivers \
+      procps \
+      unzip || true) \
+    && test -x /usr/bin/curl \
+    && test -x /usr/bin/unzip \
+    && test -e /usr/lib/x86_64-linux-gnu/libvulkan.so.1 \
+    && test -e /usr/lib/x86_64-linux-gnu/libfontconfig.so.1 \
+    && curl -fL \
+      "https://dl.google.com/android/repository/emulator-linux_x64-${EMULATOR_BUILD_ID}.zip" \
+      -o /tmp/emulator.zip \
+    && mkdir -p /opt/android-emulator \
+    && unzip -q /tmp/emulator.zip -d /opt/android-emulator \
+    && rm -f /tmp/emulator.zip \
+    && rm -rf /var/lib/apt/lists/*
+
+ENV ANDROID_SDK_ROOT=/host-android-sdk
+ENV PATH=/opt/android-emulator/emulator:/host-android-sdk/platform-tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ENV DOCKER=true
+ENV EMULATOR_GPU_MODE=lavapipe
+ENV EMULATOR_SAFE_GPU_MODE=lavapipe
+ENV EMULATOR_SEGFAULT_GPU_FALLBACK=lavapipe
+ENV LIBGL_ALWAYS_SOFTWARE=1
+
+WORKDIR /work
+ENTRYPOINT ["/bin/bash"]

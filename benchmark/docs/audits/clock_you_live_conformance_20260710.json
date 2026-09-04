@@ -1,0 +1,377 @@
+{
+  "audit_type": "clock_you_real_device_verifier_conformance",
+  "artifact_role": "harness_conformance_only_not_model_result",
+  "created_at": "2026-07-11T01:30:46Z",
+  "device": {
+    "serial": "emulator-5554",
+    "console_port": 5554,
+    "grpc_port": 8554,
+    "adb_server_port": 5041,
+    "android_release": "13",
+    "api_level": "33",
+    "fingerprint": "google/sdk_gphone64_x86_64/emu64x:13/TE1A.240213.009/12342917:userdebug/dev-keys",
+    "docker_image_digest": "sha256:6d8b2c148aebd3a1fe626768efe22c01a7a62cdbd2cbbe7d3f973adc57c7dd2f"
+  },
+  "app_identity": {
+    "package_name": "com.bnyro.clock",
+    "version_name": "9.1",
+    "version_code": "19",
+    "apk_path": "/data/app/~~AsSntO5gHCXR892PA9MAoA==/com.bnyro.clock-3fkuiyB04vybcYDwAYQzhg==/base.apk",
+    "apk_sha256": "48ffaa45bf01da3d59002de05022706398518324f63624aeb069368f6061a79e",
+    "valid": true
+  },
+  "expected_template_count": 10,
+  "tested_templates": [
+    "ClockAddWorldClock",
+    "ClockCreateAlarm",
+    "ClockCreateTimer",
+    "ClockDeleteAlarm",
+    "ClockEditAlarm",
+    "ClockEnableAlarm",
+    "ClockPauseStopwatch",
+    "ClockStartTimer",
+    "ClockStopwatchReset",
+    "ClockStopwatchRunning"
+  ],
+  "case_count": 42,
+  "failed_case_count": 0,
+  "all_templates_qualified": true,
+  "cases": [
+    {
+      "template": "ClockCreateAlarm",
+      "case": "lifecycle_fresh_reset",
+      "state": "initialize_task reset + permission grant + target launch",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockEditAlarm",
+      "case": "lifecycle_fresh_reset",
+      "state": "initialize_task reset + permission grant + target launch",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockEnableAlarm",
+      "case": "lifecycle_fresh_reset",
+      "state": "initialize_task reset + permission grant + target launch",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockDeleteAlarm",
+      "case": "lifecycle_fresh_reset",
+      "state": "initialize_task reset + permission grant + target launch",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockCreateTimer",
+      "case": "lifecycle_fresh_reset",
+      "state": "initialize_task reset + permission grant + target launch",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockStartTimer",
+      "case": "lifecycle_fresh_reset",
+      "state": "initialize_task reset + permission grant + target launch",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockStopwatchRunning",
+      "case": "lifecycle_fresh_reset",
+      "state": "initialize_task reset + permission grant + target launch",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockPauseStopwatch",
+      "case": "lifecycle_fresh_reset",
+      "state": "initialize_task reset + permission grant + target launch",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockStopwatchReset",
+      "case": "lifecycle_fresh_reset",
+      "state": "initialize_task reset + permission grant + target launch",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockAddWorldClock",
+      "case": "lifecycle_fresh_reset",
+      "state": "initialize_task reset + permission grant + target launch",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockCreateAlarm",
+      "case": "no_op_empty",
+      "state": "no alarms",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockCreateAlarm",
+      "case": "near_miss_wrong_minute",
+      "state": "06:30 enabled",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockCreateAlarm",
+      "case": "positive_exact",
+      "state": "06:45 enabled",
+      "expected": 1.0,
+      "actual": 1.0,
+      "passed": true
+    },
+    {
+      "template": "ClockEditAlarm",
+      "case": "no_op_old_only",
+      "state": "07:15 only",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockEditAlarm",
+      "case": "near_miss_old_and_new",
+      "state": "07:15 and 18:45",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockEditAlarm",
+      "case": "positive_replaced",
+      "state": "18:45 only",
+      "expected": 1.0,
+      "actual": 1.0,
+      "passed": true
+    },
+    {
+      "template": "ClockEnableAlarm",
+      "case": "no_op_empty",
+      "state": "no alarms",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockEnableAlarm",
+      "case": "near_miss_disabled",
+      "state": "08:30 disabled",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockEnableAlarm",
+      "case": "positive_enabled",
+      "state": "08:30 enabled",
+      "expected": 1.0,
+      "actual": 1.0,
+      "passed": true
+    },
+    {
+      "template": "ClockDeleteAlarm",
+      "case": "no_op_initially_absent",
+      "state": "target never created",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockDeleteAlarm",
+      "case": "partial_created_not_deleted",
+      "state": "09:15 exists; evaluator latches creation",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockDeleteAlarm",
+      "case": "positive_created_then_deleted",
+      "state": "09:15 absent after observed creation",
+      "expected": 1.0,
+      "actual": 1.0,
+      "passed": true
+    },
+    {
+      "template": "ClockDeleteAlarm",
+      "case": "near_miss_wrong_alarm_only",
+      "state": "09:30 exists; target never created",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockAddWorldClock",
+      "case": "no_op_empty",
+      "state": "no persisted time zones",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockAddWorldClock",
+      "case": "near_miss_wrong_city",
+      "state": "Sydney only",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockAddWorldClock",
+      "case": "positive_exact_city",
+      "state": "Berlin persisted as Europe/Berlin",
+      "expected": 1.0,
+      "actual": 1.0,
+      "passed": true
+    },
+    {
+      "template": "ClockCreateTimer",
+      "case": "no_op_zero_picker",
+      "state": "00:00:00 picker",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockCreateTimer",
+      "case": "near_miss_wrong_duration",
+      "state": "00:03:00 picker",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockCreateTimer",
+      "case": "positive_exact_picker",
+      "state": "00:02:00 picker; not started",
+      "expected": 1.0,
+      "actual": 1.0,
+      "passed": true
+    },
+    {
+      "template": "ClockStartTimer",
+      "case": "no_op_zero_picker",
+      "state": "00:00:00 picker",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockStartTimer",
+      "case": "positive_running",
+      "state": "countdown plus projected end time",
+      "expected": 1.0,
+      "actual": 1.0,
+      "passed": true
+    },
+    {
+      "template": "ClockStartTimer",
+      "case": "near_miss_paused",
+      "state": "countdown paused; projected end time absent",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockStopwatchRunning",
+      "case": "no_op_initial_zero",
+      "state": "one action button",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockStopwatchRunning",
+      "case": "positive_running",
+      "state": "three action buttons",
+      "expected": 1.0,
+      "actual": 1.0,
+      "passed": true
+    },
+    {
+      "template": "ClockStopwatchRunning",
+      "case": "near_miss_paused",
+      "state": "two action buttons",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockPauseStopwatch",
+      "case": "no_op_initial_zero",
+      "state": "one action button",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockPauseStopwatch",
+      "case": "near_miss_still_running",
+      "state": "three action buttons",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockPauseStopwatch",
+      "case": "positive_paused",
+      "state": "two action buttons",
+      "expected": 1.0,
+      "actual": 1.0,
+      "passed": true
+    },
+    {
+      "template": "ClockStopwatchReset",
+      "case": "no_op_initial_zero",
+      "state": "fresh one-button zero; no run latch",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockStopwatchReset",
+      "case": "partial_running_not_reset",
+      "state": "three action buttons; run latched",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockStopwatchReset",
+      "case": "partial_paused_not_reset",
+      "state": "two action buttons; run remains latched",
+      "expected": 0.0,
+      "actual": 0.0,
+      "passed": true
+    },
+    {
+      "template": "ClockStopwatchReset",
+      "case": "positive_run_pause_reset",
+      "state": "one-button zero after observed run",
+      "expected": 1.0,
+      "actual": 1.0,
+      "passed": true
+    }
+  ]
+}
